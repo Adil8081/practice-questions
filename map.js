@@ -22,25 +22,56 @@ const lengthsOf = function (strings) {
 // console.log(lengthsOf(['tab','control','caps','spacebar']));
 
 // uppercase of ["hello", "world"] => ["HELLO", "WORLD"]
-const convertToUppercase = function (string) {
+const majusculeOf = function (string) {
   return string.toUpperCase();
 }
 
 const uppercaseOf = function (strings) {
-  return strings.map(convertToUppercase);
+  return strings.map(majusculeOf);
 };
 
 // console.log(uppercaseOf(['boTtle', 'moBile', 'charger','earphone']));
 
 // first characters of ["apple", "banana", "kiwi"] => ["a", "b", "k"]
-const firstCharactersOf = function (strings) { };
+const startingCharOf = function (string) {
+  return string.at(0);
+}
+
+const firstCharactersOf = function (strings) {
+  return strings.map(startingCharOf);
+};
+
+// console.log(firstCharactersOf(["apple", "banana", "kiwi"]));
 
 // truth values of [0, 1, 2, 3] => [false, true, true, true]
 // Assume non-zero numbers are true, and zero is false
-const truthValuesOf = function (numbers) { };
+const isNonZero = function (number) {
+  return number !== 0;
+}
+
+const truthValuesOf = function (numbers) {
+  return numbers.map(isNonZero);
+};
+
+// console.log(truthValuesOf([0, 1, 2, 3]));
 
 // reverse strings of ["hello", "world"] => ["olleh", "dlrow"]
-const reversedStringsOf = function (strings) { };
+const reverseString = function (string) {
+  // let reversedString = '';
+
+  // for (const char of string) {
+  //   reversedString = char + reversedString;
+  // }
+
+  // return reversedString;
+
+  return string.split('').reverse().join('');
+}
+const reversedStringsOf = function (strings) {
+  return strings.map(reverseString);
+};
+
+console.log(reversedStringsOf(["hello", "world"]));
 
 // double letters of ["cat", "dog", "bat"] => ["ccaat", "ddoog", "bbaatt"]
 const doubleLettersOf = function (strings) { };
