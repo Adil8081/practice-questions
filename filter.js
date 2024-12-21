@@ -49,7 +49,7 @@ const isGreaterThan10 = function (number) {
 
 const filterNumbersGreaterThanTen = function (numbers) {
   return numbers.filter(isGreaterThan10);
-};
+}
 
 // console.log(filterNumbersGreaterThanTen([5, 12, 7, 18, 3]));
 
@@ -60,7 +60,7 @@ const hasAbove200Pages = function (book) {
 
 const filterLongBooks = function (books) {
   return books.filter(hasAbove200Pages);
-};
+}
 
 // console.log(filterLongBooks([{ title: "Book 1", pages: 150 }, { title: "Book 2", pages: 250 }]));
 
@@ -71,12 +71,20 @@ const isProfileIncomplete = function (userDetail) {
 
 const filterIncompleteProfiles = function (users) {
   return users.filter(isProfileIncomplete);
-};
+}
 
-console.log(filterIncompleteProfiles([{ username: "alice", profileComplete: true }, { username: "bob", profileComplete: false }]));
+// console.log(filterIncompleteProfiles([{ username: "alice", profileComplete: true }, { username: "bob", profileComplete: false }]));
 
 // students with grades above 80 [{name: "John", grade: 75}, {name: "Jane", grade: 85}] => [{name: "Jane", grade: 85}]
-const filterHighGrades = function (students) { };
+const hasGradeAbove80 = function (student) {
+  return student.grade > 80;
+}
+
+const filterHighGrades = function (students) {
+  return students.filter(hasGradeAbove80);
+}
+
+// console.log(filterHighGrades([{ name: "John", grade: 75 }, { name: "Jane", grade: 85 }]));
 
 // products that are in stock [{product: "apple", inStock: true}, {product: "banana", inStock: false}] => [{product: "apple", inStock: true}]
 const filterInStockProducts = function (products) { };
