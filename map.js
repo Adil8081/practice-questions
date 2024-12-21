@@ -1,5 +1,14 @@
 // squares of [1, 2, 3] => [1, 4, 9]
-const squaresOf = function (numbers) { };
+const square = function (number) {
+  return Math.pow(number, 2);
+}
+
+const squaresOf = function (numbers) {
+  return numbers.map(square);
+};
+
+// console.log(squaresOf([1, 2, 3, 4, 5]));
+// console.log(squaresOf([0, -1]));
 
 // lengths of ["apple", "banana", "kiwi"] => [5, 6, 4]
 const lengthsOf = function (strings) { };
