@@ -5,7 +5,7 @@ const square = function (number) {
 
 const squaresOf = function (numbers) {
   return numbers.map(square);
-};
+}
 
 // console.log(squaresOf([1, 2, 3, 4, 5]));
 // console.log(squaresOf([0, -1]));
@@ -17,7 +17,7 @@ const stringLength = function (string) {
 
 const lengthsOf = function (strings) {
   return strings.map(stringLength);
-};
+}
 
 // console.log(lengthsOf(['tab','control','caps','spacebar']));
 
@@ -28,7 +28,7 @@ const majusculeOf = function (string) {
 
 const uppercaseOf = function (strings) {
   return strings.map(majusculeOf);
-};
+}
 
 // console.log(uppercaseOf(['boTtle', 'moBile', 'charger','earphone']));
 
@@ -39,7 +39,7 @@ const startingCharOf = function (string) {
 
 const firstCharactersOf = function (strings) {
   return strings.map(startingCharOf);
-};
+}
 
 // console.log(firstCharactersOf(["apple", "banana", "kiwi"]));
 
@@ -51,7 +51,7 @@ const isNonZero = function (number) {
 
 const truthValuesOf = function (numbers) {
   return numbers.map(isNonZero);
-};
+}
 
 // console.log(truthValuesOf([0, 1, 2, 3]));
 
@@ -69,16 +69,16 @@ const reverseString = function (string) {
 }
 const reversedStringsOf = function (strings) {
   return strings.map(reverseString);
-};
+}
 
 // console.log(reversedStringsOf(["hello", "world"]));
 
 // double letters of ["cat", "dog", "bat"] => ["ccaat", "ddoog", "bbaatt"]
 
-const doubleStringChar = function(string){
+const doubleStringChar = function (string) {
   let doubledString = '';
 
-  for(const char of string){
+  for (const char of string) {
     doubledString += char + char;
   }
 
@@ -86,13 +86,20 @@ const doubleStringChar = function(string){
 }
 const doubleLettersOf = function (strings) {
   return strings.map(doubleStringChar);
-};
+}
 
 // console.log(doubleLettersOf(["cat", "dog", "bat"]));
 
-
 // boolean negation of [true, false, true] => [false, true, false]
-const negatedBooleansOf = function (booleans) { };
+const negate = function (boolean) {
+  return !boolean;
+}
+
+const negatedBooleansOf = function (booleans) {
+  return booleans.map(negate);
+}
+
+// console.log((negatedBooleansOf([true, false, true])));
 
 // character codes of ["a", "b", "c"] => [97, 98, 99]
 // Use the `charCodeAt` method on each string
