@@ -87,13 +87,57 @@ const filterHighGrades = function (students) {
 // console.log(filterHighGrades([{ name: "John", grade: 75 }, { name: "Jane", grade: 85 }]));
 
 // products that are in stock [{product: "apple", inStock: true}, {product: "banana", inStock: false}] => [{product: "apple", inStock: true}]
-const filterInStockProducts = function (products) { };
+const inStock = function (productDetail) {
+  return productDetail.inStock;
+}
+
+const filterInStockProducts = function (products) {
+  return products.filter(inStock);
+}
+
+// console.log(filterInStockProducts([{ product: "apple", inStock: true }, { product: "banana", inStock: false }]));
 
 // orders placed in the last 30 days [{orderDate: "2024-11-01"}, {orderDate: "2024-12-01"}] => [{orderDate: "2024-12-01"}]
-const filterRecentOrders = function (orders) { };
+const orderedWithin30Days = function (orderDetail) {
+  const date = orderDetail.orderDate.split('-');
+  const month = date[1];
+  const day = date.at(-1);
+
+  if ((day >= 22 && +month === 11) || +month === 12) {
+    return true;
+  }
+
+  return false;
+}
+
+const filterRecentOrders = function (orders) {
+  return orders.filter(orderedWithin30Days);
+}
+
+// console.log(filterRecentOrders([{ orderDate: "2024-11-01" }, { orderDate: "2024-12-01" }, { orderDate: "2024-11-24" }]));
 
 // products with a price lower than the average [{name: "item1", price: 10}, {name: "item2", price: 20}, {name: "item3", price: 5}] => [{name: "item1", price: 10}, {name: "item3", price: 5}]
-const filterBelowAveragePrice = function (products) { };
+
+const computeAvgPrice = function (products) {
+  let totalPrice = 0;
+  const noOfProducts = products.length;
+
+  for (const product of products) {
+    totalPrice += product.price;
+  }
+
+  return totalPrice / noOfProducts;
+}
+
+const filterBelowAveragePrice = function (products) {
+  const averagePrice = computeAvgPrice(products);
+
+  return products.filter(function (product) {
+    return product.price < averagePrice;
+  })
+}
+
+// console.log(filterBelowAveragePrice([{ name: "item1", price: 10 }, { name: "item2", price: 20 }, { name: "item3", price: 5 }]));
 
 // active users who posted in the last 7 days [{username: "alice", lastPostDate: "2024-12-01", active: true}, {username: "bob", lastPostDate: "2024-11-20", active: true}] => [{username: "alice", lastPostDate: "2024-12-01", active: true}]
 const filterRecentActiveUsers = function (users) { };
