@@ -43,18 +43,26 @@ const filterActiveUsers = function (users) {
 // console.log(filterActiveUsers([{username: "alice", active: true}, {username: "bob", active: false}]));
 
 // numbers greater than 10 [5, 12, 7, 18, 3] => [12, 18]
-const greaterThan10 = function (number) {
+const isGreaterThan10 = function (number) {
   return number > 10;
 }
 
 const filterNumbersGreaterThanTen = function (numbers) {
-  return numbers.filter(greaterThan10);
+  return numbers.filter(isGreaterThan10);
 };
 
 // console.log(filterNumbersGreaterThanTen([5, 12, 7, 18, 3]));
 
 // books with more than 200 pages [{title: "Book 1", pages: 150}, {title: "Book 2", pages: 250}] => [{title: "Book 2", pages: 250}]
-const filterLongBooks = function (books) { };
+const hasAbove200Pages = function (book) {
+  return book.pages > 200;
+}
+
+const filterLongBooks = function (books) {
+  return books.filter(hasAbove200Pages);
+};
+
+// console.log(filterLongBooks([{ title: "Book 1", pages: 150 }, { title: "Book 2", pages: 250 }]));
 
 // users with incomplete profiles [{username: "alice", profileComplete: true}, {username: "bob", profileComplete: false}] => [{username: "bob", profileComplete: false}]
 const filterIncompleteProfiles = function (users) { };
