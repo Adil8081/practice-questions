@@ -125,7 +125,15 @@ const domainNamesOf = function (emails) {
 // console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com"]));
 
 // split words in ["hello world", "goodbye moon"] => [["hello", "world"], ["goodbye", "moon"]]
-const splitWordsOf = function (strings) { };
+const splitWord = function (word) {
+  return word.split(' ');
+}
+
+const splitWordsOf = function (strings) {
+  return strings.map(splitWord);
+};
+
+// console.log(splitWordsOf(["hello world", "goodbye moon"]));
 
 // join arrays of [["a", "b"], ["c", "d"]] => ["ab", "cd"]
 const joinedArraysOf = function (arrayOfArrays) { };
