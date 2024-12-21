@@ -11,10 +11,26 @@ const squaresOf = function (numbers) {
 // console.log(squaresOf([0, -1]));
 
 // lengths of ["apple", "banana", "kiwi"] => [5, 6, 4]
-const lengthsOf = function (strings) { };
+const stringLength = function (string) {
+  return string.length;
+}
+
+const lengthsOf = function (strings) {
+  return strings.map(stringLength);
+};
+
+// console.log(lengthsOf(['tab','control','caps','spacebar']));
 
 // uppercase of ["hello", "world"] => ["HELLO", "WORLD"]
-const uppercaseOf = function (strings) { };
+const convertToUppercase = function (string) {
+  return string.toUpperCase();
+}
+
+const uppercaseOf = function (strings) {
+  return strings.map(convertToUppercase);
+};
+
+// console.log(uppercaseOf(['boTtle', 'moBile', 'charger','earphone']));
 
 // first characters of ["apple", "banana", "kiwi"] => ["a", "b", "k"]
 const firstCharactersOf = function (strings) { };
