@@ -65,7 +65,15 @@ const filterLongBooks = function (books) {
 // console.log(filterLongBooks([{ title: "Book 1", pages: 150 }, { title: "Book 2", pages: 250 }]));
 
 // users with incomplete profiles [{username: "alice", profileComplete: true}, {username: "bob", profileComplete: false}] => [{username: "bob", profileComplete: false}]
-const filterIncompleteProfiles = function (users) { };
+const isProfileIncomplete = function (userDetail) {
+  return !userDetail.profileComplete;
+}
+
+const filterIncompleteProfiles = function (users) {
+  return users.filter(isProfileIncomplete);
+};
+
+console.log(filterIncompleteProfiles([{ username: "alice", profileComplete: true }, { username: "bob", profileComplete: false }]));
 
 // students with grades above 80 [{name: "John", grade: 75}, {name: "Jane", grade: 85}] => [{name: "Jane", grade: 85}]
 const filterHighGrades = function (students) { };
