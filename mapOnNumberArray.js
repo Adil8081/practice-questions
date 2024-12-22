@@ -73,7 +73,7 @@ const flattenedArraysOf = function (arrays) {
 
 // calculate percentage contribution of each number in [10, 20, 30] (relative to the total sum) => [16.67, 33.33, 50]
 const sumOfNumbers = function (sum, number) {
-  return sum += number;
+  return sum + number;
 }
 
 const percentage = function (number, total) {
