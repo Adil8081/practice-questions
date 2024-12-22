@@ -7,10 +7,18 @@ const sumOf = function (numbers) {
   return numbers.reduce(sum, 0);
 }
 
-console.log(sumOf([1, 2, 3, 4]))
+// console.log(sumOf([1, 2, 3, 4]))
 
 // productOf([1, 2, 3, 4]) => 24
-const productOf = function (numbers) { }
+const multiplication = function (product, number) {
+  return product * number;
+}
+
+const productOf = function (numbers) {
+  return numbers.reduce(multiplication, 1);
+}
+
+// console.log(productOf([1, 2, 3, 4]));
 
 // averageOf([1, 2, 3, 4, 5]) => 3
 const averageOf = function (numbers) { }
