@@ -58,23 +58,7 @@ const filterInStockProducts = function (products) {
 // console.log(filterInStockProducts([{ product: "apple", inStock: true }, { product: "banana", inStock: false }]));
 
 // orders placed in the last 30 days [{orderDate: "2024-11-01"}, {orderDate: "2024-12-01"}] => [{orderDate: "2024-12-01"}]
-const orderedWithin30Days = function (orderDetail) {
-  const date = orderDetail.orderDate.split('-');
-  const month = date[1];
-  const day = date.at(-1);
-
-  if ((day >= 22 && +month === 11) || +month === 12) {
-    return true;
-  }
-
-  return false;
-}
-
-const filterRecentOrders = function (orders) {
-  return orders.filter(orderedWithin30Days);
-}
-
-// console.log(filterRecentOrders([{ orderDate: "2024-11-01" }, { orderDate: "2024-12-01" }, { orderDate: "2024-11-24" }]));
+const filterRecentOrders = function (orders) { };
 
 // products with a price lower than the average [{name: "item1", price: 10}, {name: "item2", price: 20}, {name: "item3", price: 5}] => [{name: "item1", price: 10}, {name: "item3", price: 5}]
 

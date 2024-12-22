@@ -52,3 +52,22 @@ const filterHighGrades = function (students) {
 }
 
 // console.log(filterHighGrades([{ name: "John", grade: 75 }, { name: "Jane", grade: 85 }]));
+
+// orders placed in the last 30 days [{orderDate: "2024-11-01"}, {orderDate: "2024-12-01"}] => [{orderDate: "2024-12-01"}]
+const orderedWithin30Days = function (orderDetail) {
+  const date = orderDetail.orderDate.split('-');
+  const month = date[1];
+  const day = date.at(-1);
+
+  if ((day >= 22 && +month === 11) || +month === 12) {
+    return true;
+  }
+
+  return false;
+}
+
+const filterRecentOrders = function (orders) {
+  return orders.filter(orderedWithin30Days);
+}
+
+// console.log(filterRecentOrders([{ orderDate: "2024-11-01" }, { orderDate: "2024-12-01" }, { orderDate: "2024-11-24" }]));
