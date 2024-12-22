@@ -20,6 +20,7 @@ const filterAdults = function (people) {
 
 // console.log(filterAdults([{ name: "Alice", age: 25 }, { name: "Bob", age: 35 }]));
 
+// numbers greater than 10 [5, 12, 7, 18, 3] => [12, 18]
 const isGreaterThan10 = function (number) {
   return number > 10;
 }
@@ -30,3 +31,13 @@ const filterNumbersGreaterThanTen = function (numbers) {
 
 // console.log(filterNumbersGreaterThanTen([5, 12, 7, 18, 3]));
 
+// books with more than 200 pages [{title: "Book 1", pages: 150}, {title: "Book 2", pages: 250}] => [{title: "Book 2", pages: 250}]
+const hasAbove200Pages = function (book) {
+  return book.pages > 200;
+}
+
+const filterLongBooks = function (books) {
+  return books.filter(hasAbove200Pages);
+}
+
+// console.log(filterLongBooks([{ title: "Book 1", pages: 150 }, { title: "Book 2", pages: 250 }]));

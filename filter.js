@@ -32,13 +32,7 @@ const filterActiveUsers = function (users) {
 const filterNumbersGreaterThanTen = function (numbers) { };
 
 // books with more than 200 pages [{title: "Book 1", pages: 150}, {title: "Book 2", pages: 250}] => [{title: "Book 2", pages: 250}]
-const hasAbove200Pages = function (book) {
-  return book.pages > 200;
-}
-
-const filterLongBooks = function (books) {
-  return books.filter(hasAbove200Pages);
-}
+const filterLongBooks = function (books) { };
 
 // console.log(filterLongBooks([{ title: "Book 1", pages: 150 }, { title: "Book 2", pages: 250 }]));
 
