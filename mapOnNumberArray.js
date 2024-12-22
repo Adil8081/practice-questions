@@ -70,3 +70,22 @@ const flattenedArraysOf = function (arrays) {
 };
 
 // console.log(flattenedArraysOf([[1, [2, 3]], [4, [5, 6]]]));
+
+// calculate percentage contribution of each number in [10, 20, 30] (relative to the total sum) => [16.67, 33.33, 50]
+const sumOfNumbers = function (sum, number) {
+  return sum += number;
+}
+
+const percentage = function (number, total) {
+  return (number / total) * 100;
+}
+
+const percentageContributions = function (numbers) {
+  const total = numbers.reduce(sumOfNumbers, 0);
+
+  return numbers.map(function (number) {
+    return Math.round((percentage(number, total) * 100)) / 100;
+  })
+};
+
+// console.log(percentageContributions([10, 20, 30]));
