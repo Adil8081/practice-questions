@@ -259,15 +259,21 @@ const flattenedArraysOf = function (arrays) {
 
 // sort letters in ["cat", "bat", "rat"] alphabetically => ["act", "abt", "art"]
 const sortedLettersOf = function (strings) {
-  return strings.map(function(string){
+  return strings.map(function (string) {
     return [...string].sort().join('');
   })
 };
 
-console.log(sortedLettersOf(["cat", "bat", "rat"]));
+// console.log(sortedLettersOf(["cat", "bat", "rat"]));
 
 // wrap strings in brackets ["apple", "banana"] => ["[apple]", "[banana]"]
-const wrappedStringsOf = function (strings) { };
+const wrappedStringsOf = function (strings) {
+  return strings.map(function (string) {
+    return '[' + string + ']';
+  })
+};
+
+console.log(wrappedStringsOf(["apple", "banana"]));
 
 // extract names from [{ name: "Alice" }, { name: "Bob" }] => ["Alice", "Bob"]
 const extractNames = function (objects) { };
