@@ -258,7 +258,13 @@ const flattenedArraysOf = function (arrays) {
 // console.log(flattenedArraysOf([[1, [2, 3]], [4, [5, 6]]]));
 
 // sort letters in ["cat", "bat", "rat"] alphabetically => ["act", "abt", "art"]
-const sortedLettersOf = function (strings) { };
+const sortedLettersOf = function (strings) {
+  return strings.map(function(string){
+    return [...string].sort().join('');
+  })
+};
+
+console.log(sortedLettersOf(["cat", "bat", "rat"]));
 
 // wrap strings in brackets ["apple", "banana"] => ["[apple]", "[banana]"]
 const wrappedStringsOf = function (strings) { };
