@@ -199,16 +199,16 @@ const reversedWordsOf = function (strings) {
 
 // extract unique characters from ["apple", "banana", "grape"] => ["apl", "ban", "gra"]
 // Maintain the order of their first appearance in each string
-const uniqueCharactersOf = function (strings) {};
+const uniqueCharactersOf = function (strings) { };
 
 // generate ranges from [3, 5, 2] => [[0, 1, 2], [0, 1, 2, 3, 4], [0, 1]]
-const range = function(number){
+const range = function (number) {
   const generatedRange = [];
 
   for (let index = 0; index < number; index++) {
     generatedRange.push(index);
   }
-  
+
   return generatedRange;
 }
 
@@ -219,7 +219,21 @@ const rangesOf = function (numbers) {
 console.log(rangesOf([3, 5, 2]));
 
 // capitalize first letters of ["hello world", "goodbye moon"] => ["Hello World", "Goodbye Moon"]
-const capitalizedFirstLettersOf = function (strings) { };
+const majuscule = function (word) {
+  const [firstChar, ...restChar] = [...word];
+
+  return firstChar.toUpperCase() + restChar.join('');
+}
+
+const majusculeFirstChar = function (string) {
+  return string.split(' ').map(majuscule).join(' ');
+}
+
+const capitalizedFirstLettersOf = function (strings) {
+  return strings.map(majusculeFirstChar);
+};
+
+console.log(capitalizedFirstLettersOf(["hello world", "goodbye moon"]));
 
 // find word lengths in ["apple pie", "banana split"] => [[5, 3], [6, 5]]
 const wordLengthsOf = function (strings) { };
