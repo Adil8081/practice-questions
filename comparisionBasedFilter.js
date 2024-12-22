@@ -20,4 +20,13 @@ const filterAdults = function (people) {
 
 // console.log(filterAdults([{ name: "Alice", age: 25 }, { name: "Bob", age: 35 }]));
 
+const isGreaterThan10 = function (number) {
+  return number > 10;
+}
+
+const filterNumbersGreaterThanTen = function (numbers) {
+  return numbers.filter(isGreaterThan10);
+}
+
+// console.log(filterNumbersGreaterThanTen([5, 12, 7, 18, 3]));
 
