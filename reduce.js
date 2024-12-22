@@ -28,14 +28,31 @@ const averageOf = function (numbers) {
   return totalSum / noOfTerms;
 }
 
-console.log(averageOf([1, 2, 3, 4, 5]));
+// console.log(averageOf([1, 2, 3, 4, 5]));
 
 
 // minOf([3, 1, 4, 1, 5, 9, 2]) => 1
-const minOf = function (numbers) { }
+const min = function(a, b){
+  return a < b ? a : b;
+}
+
+const minOf = function (numbers) {
+  return numbers.reduce(min , Infinity);
+}
+
+// console.log(minOf([3, 1, 4, 1, 5, 9, 2]));
+
 
 // maxOf([3, 1, 4, 1, 5, 9, 2]) => 9
-const maxOf = function (numbers) { }
+const max = function(a, b){
+  return a > b ? a : b;
+}
+
+const maxOf = function (numbers) {
+  return numbers.reduce(max, -Infinity);
+}
+
+console.log(maxOf([3, 1, 4, 1, 5, 9, 2]))
 
 // sumPositiveNumbers([1, -2, 3, -4]) => 4
 const sumPositiveNumbers = function (numbers) { }
