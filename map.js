@@ -1,13 +1,3 @@
-// squares of [1, 2, 3] => [1, 4, 9]
-const squaresOf = function (numbers) {
-  return numbers.map(function (number) {
-    return Math.pow(number, 2);
-  });
-}
-
-// console.log(squaresOf([1, 2, 3, 4, 5]));
-// console.log(squaresOf([0, -1]));
-
 // lengths of ["apple", "banana", "kiwi"] => [5, 6, 4]
 const lengthsOf = function (strings) {
   return strings.map(function (string) {
@@ -36,15 +26,6 @@ const firstCharactersOf = function (strings) {
 // console.log(firstCharactersOf(["apple", "banana", "kiwi"]));
 // console.log(firstCharactersOf(["apple", "", "kiwi"]));
 
-// truth values of [0, 1, 2, 3] => [false, true, true, true]
-// Assume non-zero numbers are true, and zero is false
-const truthValuesOf = function (numbers) {
-  return numbers.map(function (number) {
-    return number !== 0;
-  });
-}
-
-// console.log(truthValuesOf([0, 1, 2, 3]));
 
 // reverse strings of ["hello", "world"] => ["olleh", "dlrow"]
 const reverseString = function (string) {
@@ -142,14 +123,6 @@ const countVowelsOf = function (strings) {
 
 // console.log(countVowelsOf(["apple", "banana", "grape"]));
 
-// reverse arrays of [[1, 2, 3], [4, 5, 6]] => [[3, 2, 1], [6, 5, 4]]
-const reversedArraysOf = function (arrays) {
-  return arrays.map(function (array) {
-    return array.reverse();
-  })
-};
-
-// console.log(reversedArraysOf([[1, 2, 3], [4, 5, 6]]));
 
 // remove vowels from ["apple", "banana", "grape"] => ["ppl", "bnn", "grp"]
 const isNotVowel = function (char) {
@@ -168,24 +141,6 @@ const withoutVowelsOf = function (strings) {
 
 // console.log(withoutVowelsOf(["apple", "banana", "grape"]));
 
-// cumulative sums of [[1, 2, 3], [4, 5, 6]] => [[1, 3, 6], [4, 9, 15]]
-// Example: cumulative sum of [1, 2, 3] is [1, 1+2, 1+2+3]
-const runningSumArray = function (array) {
-  let runningSum = 0;
-
-  return array.map(function (number) {
-    runningSum += number;
-
-    return runningSum;
-  });
-}
-
-const cumulativeSumsOf = function (arrays) {
-  return arrays.map(runningSumArray);
-};
-
-// console.log(cumulativeSumsOf([[1, 2, 3], [4, 5, 6]]));
-
 // reverse words in ["hello world", "goodbye moon"] => ["olleh dlrow", "eybdoog noom"]
 const reverseWords = function (words) {
   return words.split(' ').map((word) => [...word].reverse().join('')).join(' ');
@@ -201,22 +156,6 @@ const reversedWordsOf = function (strings) {
 // Maintain the order of their first appearance in each string
 const uniqueCharactersOf = function (strings) { };
 
-// generate ranges from [3, 5, 2] => [[0, 1, 2], [0, 1, 2, 3, 4], [0, 1]]
-const range = function (number) {
-  const generatedRange = [];
-
-  for (let index = 0; index < number; index++) {
-    generatedRange.push(index);
-  }
-
-  return generatedRange;
-}
-
-const rangesOf = function (numbers) {
-  return numbers.map(range);
-};
-
-// console.log(rangesOf([3, 5, 2]));
 
 // capitalize first letters of ["hello world", "goodbye moon"] => ["Hello World", "Goodbye Moon"]
 const majuscule = function (word) {
@@ -248,14 +187,6 @@ const wordLengthsOf = function (strings) {
 
 // console.log(wordLengthsOf(["apple pie", "banana split"]));
 
-// flatten nested arrays of [[1, [2, 3]], [4, [5, 6]]] => [[1, 2, 3], [4, 5, 6]]
-const flattenedArraysOf = function (arrays) {
-  return arrays.map(function (array) {
-    return array.flat();
-  });
-};
-
-// console.log(flattenedArraysOf([[1, [2, 3]], [4, [5, 6]]]));
 
 // sort letters in ["cat", "bat", "rat"] alphabetically => ["act", "abt", "art"]
 const sortedLettersOf = function (strings) {
