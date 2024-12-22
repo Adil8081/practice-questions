@@ -1,72 +1,56 @@
 // squares of [1, 2, 3] => [1, 4, 9]
-const square = function (number) {
-  return Math.pow(number, 2);
-}
-
 const squaresOf = function (numbers) {
-  return numbers.map(square);
+  return numbers.map(function (number) {
+    return Math.pow(number, 2);
+  });
 }
 
 // console.log(squaresOf([1, 2, 3, 4, 5]));
 // console.log(squaresOf([0, -1]));
 
 // lengths of ["apple", "banana", "kiwi"] => [5, 6, 4]
-const stringLength = function (string) {
-  return string.length;
-}
-
 const lengthsOf = function (strings) {
-  return strings.map(stringLength);
+  return strings.map(function (string) {
+    return string.length;
+  });
 }
 
-// console.log(lengthsOf(['tab','control','caps','spacebar']));
+// console.log(lengthsOf(['tab', 'control', 'caps', 'spacebar']));
 
 // uppercase of ["hello", "world"] => ["HELLO", "WORLD"]
-const majusculeOf = function (string) {
-  return string.toUpperCase();
-}
-
 const uppercaseOf = function (strings) {
-  return strings.map(majusculeOf);
+  return strings.map(function (string) {
+    return string.toUpperCase();
+  });
 }
 
-// console.log(uppercaseOf(['boTtle', 'moBile', 'charger','earphone']));
+// console.log(uppercaseOf(['boTtle', 'moBile', 'charger', 'earphone']));
 
 // first characters of ["apple", "banana", "kiwi"] => ["a", "b", "k"]
-const startingCharOf = function (string) {
-  return string.at(0);
-}
-
 const firstCharactersOf = function (strings) {
-  return strings.map(startingCharOf);
+  return strings.map(function (string) {
+    return string.at(0) || "";
+  });
 }
 
 // console.log(firstCharactersOf(["apple", "banana", "kiwi"]));
+// console.log(firstCharactersOf(["apple", "", "kiwi"]));
 
 // truth values of [0, 1, 2, 3] => [false, true, true, true]
 // Assume non-zero numbers are true, and zero is false
-const isNonZero = function (number) {
-  return number !== 0;
-}
-
 const truthValuesOf = function (numbers) {
-  return numbers.map(isNonZero);
+  return numbers.map(function (number) {
+    return number !== 0;
+  });
 }
 
 // console.log(truthValuesOf([0, 1, 2, 3]));
 
 // reverse strings of ["hello", "world"] => ["olleh", "dlrow"]
 const reverseString = function (string) {
-  // let reversedString = '';
-
-  // for (const char of string) {
-  //   reversedString = char + reversedString;
-  // }
-
-  // return reversedString;
-
-  return string.split('').reverse().join('');
+  return [...string].reverse().join('');
 }
+
 const reversedStringsOf = function (strings) {
   return strings.map(reverseString);
 }
@@ -76,14 +60,11 @@ const reversedStringsOf = function (strings) {
 // double letters of ["cat", "dog", "bat"] => ["ccaat", "ddoog", "bbaatt"]
 
 const doubleStringChar = function (string) {
-  let doubledString = '';
-
-  for (const char of string) {
-    doubledString += char + char;
-  }
-
-  return doubledString;
+  return [...string].map(function (char) {
+    return char.repeat(2);
+  }).join('');
 }
+
 const doubleLettersOf = function (strings) {
   return strings.map(doubleStringChar);
 }
@@ -91,58 +72,74 @@ const doubleLettersOf = function (strings) {
 // console.log(doubleLettersOf(["cat", "dog", "bat"]));
 
 // boolean negation of [true, false, true] => [false, true, false]
-const negate = function (boolean) {
-  return !boolean;
-}
-
 const negatedBooleansOf = function (booleans) {
-  return booleans.map(negate);
+  return booleans.map(function (boolean) {
+    return !boolean;
+  });
 }
 
 // console.log((negatedBooleansOf([true, false, true])));
 
 // character codes of ["a", "b", "c"] => [97, 98, 99]
 // Use the `charCodeAt` method on each string
-const standardCodeOf = function (char) {
-  return char.charCodeAt();
-}
-
 const charCodesOf = function (strings) {
-  return strings.map(standardCodeOf);
+  return strings.map(function (char) {
+    return char.charCodeAt();
+  });
 };
 
 // console.log(charCodesOf(["a", "b", "c"]));
 
 // extract domain names from ["user1@gmail.com", "admin@yahoo.com"] => ["gmail.com", "yahoo.com"]
-const extractDomain = function (email) {
-  return email.split('@').at(-1);
-}
-
 const domainNamesOf = function (emails) {
-  return emails.map(extractDomain);
+  return emails.map(function (email) {
+    return email.split('@').at(-1);
+  });
 };
 
 // console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com"]));
 
 // split words in ["hello world", "goodbye moon"] => [["hello", "world"], ["goodbye", "moon"]]
-const splitWord = function (word) {
-  return word.split(' ');
-}
-
 const splitWordsOf = function (strings) {
-  return strings.map(splitWord);
+  return strings.map(function (text) {
+    return text.split(' ');
+  });
 };
 
 // console.log(splitWordsOf(["hello world", "goodbye moon"]));
 
 // join arrays of [["a", "b"], ["c", "d"]] => ["ab", "cd"]
-const joinedArraysOf = function (arrayOfArrays) { };
+const joinedArraysOf = function (arrayOfArrays) {
+  return arrayOfArrays.map(function (array) {
+    return array.join('');
+  })
+};
+
+// console.log(joinedArraysOf([["a", "b"], ["c", "d"]]));
 
 // repeat strings in ["hi", "bye"] => ["hihi", "byebye"]
-const repeatedStringsOf = function (strings) { };
+const repeatedStringsOf = function (strings) {
+  return strings.map(function (string) {
+    return string.repeat(2);
+  })
+};
 
+// console.log(repeatedStringsOf(["hi", "bye"]));
 // count vowels in ["apple", "banana", "grape"] => [2, 3, 2]
-const countVowelsOf = function (strings) { };
+const hasVowel = function (count, char) {
+  const vowels = 'AaEeIiOoUu';
+  return vowels.includes(char) ? count += 1 : count;
+}
+
+const countVowels = function (string) {
+  return [...string].reduce(hasVowel, 0);
+}
+
+const countVowelsOf = function (strings) {
+  return strings.map(countVowels);
+};
+
+// console.log(countVowelsOf(["apple", "banana", "grape"]));
 
 // reverse arrays of [[1, 2, 3], [4, 5, 6]] => [[3, 2, 1], [6, 5, 4]]
 const reversedArraysOf = function (arrays) { };
