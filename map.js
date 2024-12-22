@@ -195,14 +195,28 @@ const reversedWordsOf = function (strings) {
   return strings.map(reverseWords);
 };
 
-console.log(reversedWordsOf(["hello world", "goodbye moon"]));
+// console.log(reversedWordsOf(["hello world", "goodbye moon"]));
 
 // extract unique characters from ["apple", "banana", "grape"] => ["apl", "ban", "gra"]
 // Maintain the order of their first appearance in each string
-const uniqueCharactersOf = function (strings) { };
+const uniqueCharactersOf = function (strings) {};
 
 // generate ranges from [3, 5, 2] => [[0, 1, 2], [0, 1, 2, 3, 4], [0, 1]]
-const rangesOf = function (numbers) { };
+const range = function(number){
+  const generatedRange = [];
+
+  for (let index = 0; index < number; index++) {
+    generatedRange.push(index);
+  }
+  
+  return generatedRange;
+}
+
+const rangesOf = function (numbers) {
+  return numbers.map(range);
+};
+
+console.log(rangesOf([3, 5, 2]));
 
 // capitalize first letters of ["hello world", "goodbye moon"] => ["Hello World", "Goodbye Moon"]
 const capitalizedFirstLettersOf = function (strings) { };
