@@ -10,15 +10,7 @@ const filterEvenNumbers = function (numbers) {
 // console.log(filterEvenNumbers([1, 2, 3, 4, 5]));
 
 // words with more than 5 letters ["apple", "banana", "kiwi", "grape"] => ["banana"]
-const hasAbove5Letters = function (word) {
-  return word.length > 5;
-}
-
-const filterLongWords = function (words) {
-  return words.filter(hasAbove5Letters);
-}
-
-// console.log(filterLongWords(["apple", "banana", "kiwi", "grape"]));
+const filterLongWords = function (words) { };
 
 // people older than 30 [{name: "Alice", age: 25}, {name: "Bob", age: 35}] => [{name: "Bob", age: 35}]
 const ageAbove30 = function (person) {
