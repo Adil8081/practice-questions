@@ -15,8 +15,6 @@ const filterLongWords = function (words) { };
 // people older than 30 [{name: "Alice", age: 25}, {name: "Bob", age: 35}] => [{name: "Bob", age: 35}]
 const filterAdults = function (people) { };
 
-// console.log(filterAdults([{ name: "Alice", age: 25 }, { name: "Bob", age: 35 }]));
-
 // active users [{username: "alice", active: true}, {username: "bob", active: false}] => [{username: "alice", active: true}]
 const isUserActive = function (userDetail) {
   return userDetail.active;
@@ -34,8 +32,6 @@ const filterNumbersGreaterThanTen = function (numbers) { };
 // books with more than 200 pages [{title: "Book 1", pages: 150}, {title: "Book 2", pages: 250}] => [{title: "Book 2", pages: 250}]
 const filterLongBooks = function (books) { };
 
-// console.log(filterLongBooks([{ title: "Book 1", pages: 150 }, { title: "Book 2", pages: 250 }]));
-
 // users with incomplete profiles [{username: "alice", profileComplete: true}, {username: "bob", profileComplete: false}] => [{username: "bob", profileComplete: false}]
 const isProfileIncomplete = function (userDetail) {
   return !userDetail.profileComplete;
@@ -48,15 +44,7 @@ const filterIncompleteProfiles = function (users) {
 // console.log(filterIncompleteProfiles([{ username: "alice", profileComplete: true }, { username: "bob", profileComplete: false }]));
 
 // students with grades above 80 [{name: "John", grade: 75}, {name: "Jane", grade: 85}] => [{name: "Jane", grade: 85}]
-const hasGradeAbove80 = function (student) {
-  return student.grade > 80;
-}
-
-const filterHighGrades = function (students) {
-  return students.filter(hasGradeAbove80);
-}
-
-// console.log(filterHighGrades([{ name: "John", grade: 75 }, { name: "Jane", grade: 85 }]));
+const filterHighGrades = function (students) { };
 
 // products that are in stock [{product: "apple", inStock: true}, {product: "banana", inStock: false}] => [{product: "apple", inStock: true}]
 const inStock = function (productDetail) {

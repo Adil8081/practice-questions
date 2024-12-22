@@ -41,3 +41,14 @@ const filterLongBooks = function (books) {
 }
 
 // console.log(filterLongBooks([{ title: "Book 1", pages: 150 }, { title: "Book 2", pages: 250 }]));
+
+// students with grades above 80 [{name: "John", grade: 75}, {name: "Jane", grade: 85}] => [{name: "Jane", grade: 85}]
+const hasGradeAbove80 = function (student) {
+  return student.grade > 80;
+}
+
+const filterHighGrades = function (students) {
+  return students.filter(hasGradeAbove80);
+}
+
+// console.log(filterHighGrades([{ name: "John", grade: 75 }, { name: "Jane", grade: 85 }]));
