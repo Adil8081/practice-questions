@@ -216,7 +216,7 @@ const rangesOf = function (numbers) {
   return numbers.map(range);
 };
 
-console.log(rangesOf([3, 5, 2]));
+// console.log(rangesOf([3, 5, 2]));
 
 // capitalize first letters of ["hello world", "goodbye moon"] => ["Hello World", "Goodbye Moon"]
 const majuscule = function (word) {
@@ -233,10 +233,20 @@ const capitalizedFirstLettersOf = function (strings) {
   return strings.map(majusculeFirstChar);
 };
 
-console.log(capitalizedFirstLettersOf(["hello world", "goodbye moon"]));
+// console.log(capitalizedFirstLettersOf(["hello world", "goodbye moon"]));
 
 // find word lengths in ["apple pie", "banana split"] => [[5, 3], [6, 5]]
-const wordLengthsOf = function (strings) { };
+const wordLength = function (string) {
+  return string.split(' ').map(function (word) {
+    return word.length;
+  })
+}
+
+const wordLengthsOf = function (strings) {
+  return strings.map(wordLength)
+};
+
+console.log(wordLengthsOf(["apple pie", "banana split"]));
 
 // flatten nested arrays of [[1, [2, 3]], [4, [5, 6]]] => [[1, 2, 3], [4, 5, 6]]
 const flattenedArraysOf = function (arrays) { };
