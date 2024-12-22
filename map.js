@@ -239,17 +239,23 @@ const capitalizedFirstLettersOf = function (strings) {
 const wordLength = function (string) {
   return string.split(' ').map(function (word) {
     return word.length;
-  })
+  });
 }
 
 const wordLengthsOf = function (strings) {
-  return strings.map(wordLength)
+  return strings.map(wordLength);
 };
 
-console.log(wordLengthsOf(["apple pie", "banana split"]));
+// console.log(wordLengthsOf(["apple pie", "banana split"]));
 
 // flatten nested arrays of [[1, [2, 3]], [4, [5, 6]]] => [[1, 2, 3], [4, 5, 6]]
-const flattenedArraysOf = function (arrays) { };
+const flattenedArraysOf = function (arrays) {
+  return arrays.map(function (array) {
+    return array.flat();
+  });
+};
+
+// console.log(flattenedArraysOf([[1, [2, 3]], [4, [5, 6]]]));
 
 // sort letters in ["cat", "bat", "rat"] alphabetically => ["act", "abt", "art"]
 const sortedLettersOf = function (strings) { };
