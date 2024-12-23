@@ -32,39 +32,58 @@ const averageOf = function (numbers) {
 
 
 // minOf([3, 1, 4, 1, 5, 9, 2]) => 1
-const min = function(a, b){
-  return a < b ? a : b;
+const min = function (num1, num2) {
+  return num1 < num2 ? num1 : num2;
 }
 
 const minOf = function (numbers) {
-  return numbers.reduce(min , Infinity);
+  return numbers.reduce(min, Infinity);
 }
 
 // console.log(minOf([3, 1, 4, 1, 5, 9, 2]));
 
-
 // maxOf([3, 1, 4, 1, 5, 9, 2]) => 9
-const max = function(a, b){
-  return a > b ? a : b;
+const max = function (num1, num2) {
+  return num1 > num2 ? num1 : num2;
 }
 
 const maxOf = function (numbers) {
   return numbers.reduce(max, -Infinity);
 }
 
-console.log(maxOf([3, 1, 4, 1, 5, 9, 2]))
+// console.log(maxOf([3, 1, 4, 1, 5, 9, 2]))
 
 // sumPositiveNumbers([1, -2, 3, -4]) => 4
-const sumPositiveNumbers = function (numbers) { }
+const sumPositiveNumbers = function (numbers) {
+  return numbers.filter((number) => number > 0).reduce(sum, 0);
+}
+
+// console.log(sumPositiveNumbers([1, -2, 3, -4]));
 
 // sumOfSquares([1, 2, 3, 4]) => 30
-const sumOfSquares = function (numbers) { }
+const sumOfSquares = function (numbers) {
+  return numbers.map((number) => number * number).reduce(sum, 0);
+}
+
+// console.log(sumOfSquares([1, 2, 3, 4]));
 
 // sumOfOddNumbers([1, 2, 3, 4, 5]) => 9
-const sumOfOddNumbers = function (numbers) { }
+const sumOfOddNumbers = function (numbers) {
+  return numbers.filter((number) => (number & 1) === 1).reduce(sum, 0);
+}
+
+// console.log(sumOfOddNumbers([1, 2, 3, 4, 5]));
 
 // countNegativeNumbers([1, -2, 3, -4]) => 2
-const countNegativeNumbers = function (numbers) { }
+const negativeCounter = function (count, number) {
+  return number < 0 ? count + 1 : count;
+}
+
+const countNegativeNumbers = function (numbers) {
+  return numbers.reduce(negativeCounter, 0);
+}
+
+// console.log(countNegativeNumbers([1, -2, 3, -4]));
 
 // findSumOfEvenSquares([1, 2, 3, 4]) => 20
 const findSumOfEvenSquares = function (numbers) { }
