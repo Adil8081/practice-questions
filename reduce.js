@@ -61,8 +61,12 @@ const sumPositiveNumbers = function (numbers) {
 // console.log(sumPositiveNumbers([1, -2, 3, -4]));
 
 // sumOfSquares([1, 2, 3, 4]) => 30
+const squaresOf = function (number) {
+  return Math.pow(number, 2);
+}
+
 const sumOfSquares = function (numbers) {
-  return numbers.map((number) => number * number).reduce(sum, 0);
+  return numbers.map(squaresOf).reduce(sum, 0);
 }
 
 // console.log(sumOfSquares([1, 2, 3, 4]));
@@ -86,13 +90,37 @@ const countNegativeNumbers = function (numbers) {
 // console.log(countNegativeNumbers([1, -2, 3, -4]));
 
 // findSumOfEvenSquares([1, 2, 3, 4]) => 20
-const findSumOfEvenSquares = function (numbers) { }
+const isEven = function (number) {
+  return (number & 1) === 0;
+}
+
+const findSumOfEvenSquares = function (numbers) {
+  return numbers.filter(isEven).map(squaresOf).reduce(sum, 0);
+}
+
+// console.log(findSumOfEvenSquares([1, 2, 3, 4]));
 
 // concatenateWords(["hello", "world"]) => "helloworld"
-const concatenateWords = function (words) { }
+const concatWord = function (string, word) {
+  return string.concat(word);
+}
+
+const concatenateWords = function (words) {
+  return words.reduce(concatWord, '');
+}
+
+// console.log(concatenateWords(["hello", "world"]));
 
 // longestWord(["apple", "banana", "cherry", "kiwi"]) => "banana"
-const longestWord = function (words) { }
+const longerWord = function (longWord, word) {
+  return word.length > longWord.length ? word : longWord;
+}
+
+const longestWord = function (words) {
+  return words.reduce(longerWord, '');
+}
+
+// console.log(longestWord(["apple", "banana", "cherry", "kiwi"]));
 
 // shortestWord(["apple", "banana", "cherry", "kiwi"]) => "kiwi"
 const shortestWord = function (words) { }
