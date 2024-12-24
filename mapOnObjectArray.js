@@ -111,3 +111,15 @@ const fullNameAndAge = function (objects) {
 //     { firstName: "Bob", lastName: "Brown", age: 30 },
 //   ])
 // );
+
+// extract scores from [{ name: "Alice", scores: { math: 90, english: 85 } }, { name: "Bob", scores: { math: 80, english: 75 } }] => [[90, 85], [80, 75]]
+const extractScores = function (objects) {
+  return objects.map((student) => Object.values(student.scores));
+};
+
+console.log(
+  extractScores([
+    { name: "Alice", scores: { math: 90, english: 85 } },
+    { name: "Bob", scores: { math: 80, english: 75 } },
+  ])
+);
