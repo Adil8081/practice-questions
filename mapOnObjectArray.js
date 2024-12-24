@@ -117,9 +117,21 @@ const extractScores = function (objects) {
   return objects.map((student) => Object.values(student.scores));
 };
 
+// console.log(
+//   extractScores([
+//     { name: "Alice", scores: { math: 90, english: 85 } },
+//     { name: "Bob", scores: { math: 80, english: 75 } },
+//   ])
+// );
+
+// extract key-value pairs from [{ key: "a", value: 1 }, { key: "b", value: 2 }] => [["a", 1], ["b", 2]]
+const keyValuePairs = function (objects) {
+  return objects.map((object) => Object.values(object));
+};
+
 console.log(
-  extractScores([
-    { name: "Alice", scores: { math: 90, english: 85 } },
-    { name: "Bob", scores: { math: 80, english: 75 } },
+  keyValuePairs([
+    { key: "a", value: 1 },
+    { key: "b", value: 2 },
   ])
 );
