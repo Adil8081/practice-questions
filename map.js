@@ -2,9 +2,6 @@
 // Maintain the order of their first appearance in each string
 const uniqueCharactersOf = function (strings) {};
 
-// subtract the smallest number from each number in [3, 8, 1] => [2, 7, 0]
-const subtractMin = function (numbers) {};
-
 // calculate ranks (1-based, descending) for scores in [{ name: "Alice", score: 80 }, { name: "Bob", score: 100 }, { name: "Charlie", score: 90 }] => [2, 1, 3]
 const calculateRanks = function (objects) {};
 
