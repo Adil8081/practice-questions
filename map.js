@@ -2,9 +2,6 @@
 // Maintain the order of their first appearance in each string
 const uniqueCharactersOf = function (strings) {};
 
-// calculate areas from [{ width: 2, height: 3 }, { width: 4, height: 5 }] => [6, 20]
-const calculateAreas = function (rectangles) {};
-
 // extract boolean flags from [{ active: true }, { active: false }] => [true, false]
 const extractFlags = function (objects) {};
 

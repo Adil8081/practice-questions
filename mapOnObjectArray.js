@@ -14,7 +14,15 @@ const extractAges = function (objects) {
 
 // extract the first letters of names from [{ name: "Alice" }, { name: "Bob" }] => ["A", "B"]
 const firstLettersOfNames = function (objects) {
-  return objects.map((letters) => letters.name[0]);
+  return objects.map((data) => data.name[0]);
 };
 
 // console.log(firstLettersOfNames([{ name: "Alice" }, { name: "Bob" }]));
+
+// calculate areas from [{ width: 2, height: 3 }, { width: 4, height: 5 }] => [6, 20]
+const calculateAreas = function (rectangles) {
+  return rectangles.map((dimensions) => dimensions.width * dimensions.height);
+};
+
+// prettier-ignore
+console.log(calculateAreas([{ width: 2, height: 3 }, { width: 4, height: 5 }]));
