@@ -2,9 +2,6 @@
 // Maintain the order of their first appearance in each string
 const uniqueCharactersOf = function (strings) {};
 
-// split full names into first and last names from [{ name: "Alice Smith" }, { name: "Bob Brown" }] => [["Alice", "Smith"], ["Bob", "Brown"]]
-const splitFullNames = function (objects) {};
-
 // normalize scores so they fall between 0 and 1 based on the max score from [{ name: "Alice", score: 80 }, { name: "Bob", score: 100 }] => [0.8, 1]
 const normalizeScores = function (objects) {};
 

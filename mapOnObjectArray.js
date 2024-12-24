@@ -129,9 +129,16 @@ const keyValuePairs = function (objects) {
   return objects.map((object) => Object.values(object));
 };
 
-console.log(
-  keyValuePairs([
-    { key: "a", value: 1 },
-    { key: "b", value: 2 },
-  ])
-);
+// console.log(
+//   keyValuePairs([
+//     { key: "a", value: 1 },
+//     { key: "b", value: 2 },
+//   ])
+// );
+
+// split full names into first and last names from [{ name: "Alice Smith" }, { name: "Bob Brown" }] => [["Alice", "Smith"], ["Bob", "Brown"]]
+const splitFullNames = function (objects) {
+  return objects.map((person) => person.name.split(" "));
+};
+
+console.log(splitFullNames([{ name: "Alice Smith" }, { name: "Bob Brown" }]));
