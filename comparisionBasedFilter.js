@@ -70,7 +70,7 @@ const filterRecentOrders = function (orders) {
   return orders.filter(orderedWithin30Days);
 }
 
-// console.log(filterRecentOrders([{ orderDate: "2024-11-01" }, { orderDate: "2024-12-01" }, { orderDate: "2024-11-24" }]));
+console.log(filterRecentOrders([{ orderDate: "2024-11-01" }, { orderDate: "2024-12-01" }, { orderDate: "2024-11-24" }]));
 
 // products with a price lower than the average [{name: "item1", price: 10}, {name: "item2", price: 20}, {name: "item3", price: 5}] => [{name: "item1", price: 10}, {name: "item3", price: 5}]
 const computeAvgPrice = function (products) {
