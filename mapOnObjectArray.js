@@ -33,3 +33,15 @@ const extractFlags = function (objects) {
 };
 
 console.log(extractFlags([{ active: true }, { active: false }]));
+
+// concatenate first and last names from [{ firstName: "Alice", lastName: "Smith" }, { firstName: "Bob", lastName: "Brown" }] => ["Alice Smith", "Bob Brown"]
+const fullNames = function (objects) {
+  return objects.map((names) => [names.firstName, names.lastName].join(" "));
+};
+
+console.log(
+  fullNames([
+    { firstName: "Alice", lastName: "Smith" },
+    { firstName: "Bob", lastName: "Brown" },
+  ])
+);
