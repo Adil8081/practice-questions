@@ -339,46 +339,46 @@ const filterBySubjectGrade = function (students, subject, threshold) {
   return students.filter((student) => student.grades[subject] > threshold);
 };
 
-console.log(
-  filterBySubjectGrade(
-    [
-      { name: "Alice", grades: { math: 90, science: 80 } },
-      { name: "Bob", grades: { math: 70, science: 85 } },
-    ],
-    "math",
-    80
-  )
-);
+// console.log(
+//   filterBySubjectGrade(
+//     [
+//       { name: "Alice", grades: { math: 90, science: 80 } },
+//       { name: "Bob", grades: { math: 70, science: 85 } },
+//     ],
+//     "math",
+//     80
+//   )
+// );
 
 // filter photos with a minimum number of likes [{id: 1, likes: 100}, {id: 2, likes: 50}] => [{id: 1, likes: 100}]
 const filterByLikes = function (photos, likes) {
   return photos.filter((photo) => photo.likes > likes);
 };
 
-console.log(
-  filterByLikes(
-    [
-      { id: 1, likes: 100 },
-      { id: 2, likes: 50 },
-    ],
-    60
-  )
-);
+// console.log(
+//   filterByLikes(
+//     [
+//       { id: 1, likes: 100 },
+//       { id: 2, likes: 50 },
+//     ],
+//     60
+//   )
+// );
 
 // filter users who have made a certain number of posts [{username: "Alice", posts: 10}, {username: "Bob", posts: 5}] => [{username: "Alice", posts: 10}]
 const filterByPostCount = function (users, postCount) {
   return users.filter((user) => user.posts > postCount);
 };
 
-console.log(
-  filterByPostCount(
-    [
-      { username: "Alice", posts: 10 },
-      { username: "Bob", posts: 5 },
-    ],
-    6
-  )
-);
+// console.log(
+//   filterByPostCount(
+//     [
+//       { username: "Alice", posts: 10 },
+//       { username: "Bob", posts: 5 },
+//     ],
+//     6
+//   )
+// );
 
 // Apply a discount to each item's price, then filter for items under a certain price [{name: "item1", price: 100}, {name: "item2", price: 50}] => [{name: "item2", price: 45}]
 const filterDiscountedItems = function (items, discount, maxPrice) {
@@ -390,13 +390,28 @@ const filterDiscountedItems = function (items, discount, maxPrice) {
   return discountPriceItems.filter((item) => item.price < maxPrice);
 };
 
-console.log(
-  filterDiscountedItems(
-    [
-      { name: "item1", price: 100 },
-      { name: "item2", price: 50 },
-    ],
-    10,
-    50
-  )
-);
+// console.log(
+//   filterDiscountedItems(
+//     [
+//       { name: "item1", price: 100 },
+//       { name: "item2", price: 50 },
+//     ],
+//     10,
+//     50
+//   )
+// );
+
+// Convert product names to uppercase, then filter for products with names longer than a certain number [{name: "apple"}, {name: "banana"}] => [{name: "APPLE"}]
+const filterLongProductNames = function (products, minLength) {
+  const upperCaseProductsName = products.map((product) => {
+    product.name = product.name.toUpperCase();
+    return product;
+  });
+
+  console.log(upperCaseProductsName);
+  return upperCaseProductsName.filter(
+    (product) => product.name.length > minLength
+  );
+};
+
+// console.log(filterLongProductNames([{ name: "apple" }, { name: "banana" }], 5));

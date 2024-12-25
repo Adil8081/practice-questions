@@ -7,9 +7,6 @@ const filterBirthdaysThisMonth = function (people) {};
 // filter events that occur before a certain date [{name: "Event1", date: "2024-12-01"}, {name: "Event2", date: "2024-11-15"}] => [{name: "Event2", date: "2024-11-15"}]
 const filterByDate = function (events, date) {};
 
-// Convert product names to uppercase, then filter for products with names longer than a certain number [{name: "apple"}, {name: "banana"}] => [{name: "APPLE"}]
-const filterLongProductNames = function (products, minLength) {};
-
 // Group users by their age, then filter for specific age groups [{name: "Alice", age: 25}, {name: "Bob", age: 35}] => [{name: "Bob", age: 35}]
 const filterAgeGroups = function (users, ageGroup) {};
 
