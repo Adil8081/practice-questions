@@ -93,4 +93,13 @@ const subtractMin = function (numbers) {
   return numbers.map((number) => number - min);
 };
 
-console.log(subtractMin([3, 8, 1]));
+// console.log(subtractMin([3, 8, 1]));
+
+// scale all numbers proportionally so the largest number becomes 100 in [20, 50, 80] => [25, 62.5, 100]
+const scaleToMax100 = function (numbers) {
+  const maxNumber = Math.max(...numbers);
+
+  return numbers.map((number) => (number * 100) / maxNumber);
+};
+
+console.log(scaleToMax100([20, 50, 80]));
