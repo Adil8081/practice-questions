@@ -2,10 +2,6 @@
 // Maintain the order of their first appearance in each string
 const uniqueCharactersOf = function (strings) {};
 
-// normalize strings by the longest string length in ["cat", "elephant", "dog"] => ["cat    ", "elephant", "dog    "]
-// (pad with spaces to match the longest length)
-const normalizeStringLengths = function (strings) {};
-
 // normalize strings by centering them based on the longest string length in ["cat", "elephant", "dog"] => ["  cat   ", "elephant", "  dog   "]
 // (pad with spaces to justify to the center)
 const centerJustifyStrings = function (strings) {};

@@ -58,7 +58,7 @@ const domainNamesOf = function (emails) {
   return emails.map((email) => email.split("@").at(-1));
 };
 
-console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com"]));
+// console.log(domainNamesOf(["user1@gmail.com", "admin@yahoo.com"]));
 
 // split words in ["hello world", "goodbye moon"] => [["hello", "world"], ["goodbye", "moon"]]
 const splitWordsOf = function (strings) {
@@ -72,12 +72,12 @@ const joinedArraysOf = function (arrayOfArrays) {
   return arrayOfArrays.map((array) => array.join(""));
 };
 
-console.log(
-  joinedArraysOf([
-    ["a", "b"],
-    ["c", "d"],
-  ])
-);
+// console.log(
+//   joinedArraysOf([
+//     ["a", "b"],
+//     ["c", "d"],
+//   ])
+// );
 
 // repeat strings in ["hi", "bye"] => ["hihi", "byebye"]
 const repeatedStringsOf = function (strings) {
@@ -178,4 +178,18 @@ const wrappedStringsOf = function (strings) {
   return strings.map((string) => "[" + string + "]");
 };
 
-console.log(wrappedStringsOf(["apple", "banana"]));
+// console.log(wrappedStringsOf(["apple", "banana"]));
+
+// normalize strings by the longest string length in ["cat", "elephant", "dog"] => ["cat    ", "elephant", "dog    "]
+// (pad with spaces to match the longest length)
+const normalizeStringLengths = function (strings) {
+  const longestStringLenght = strings.reduce(
+    (longerString, string) =>
+      longerString.length > string.length ? longerString : string,
+    ""
+  ).length;
+
+  return strings.map((string) => string.padEnd(longestStringLenght));
+};
+
+console.log(normalizeStringLengths(["cat", "elephant", "dog"]));
