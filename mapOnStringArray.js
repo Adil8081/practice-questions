@@ -183,13 +183,11 @@ const wrappedStringsOf = function (strings) {
 // normalize strings by the longest string length in ["cat", "elephant", "dog"] => ["cat    ", "elephant", "dog    "]
 // (pad with spaces to match the longest length)
 const normalizeStringLengths = function (strings) {
-  const longestStringLenght = strings.reduce(
-    (longerString, string) =>
-      longerString.length > string.length ? longerString : string,
-    ""
-  ).length;
+  const longestStringLength = Math.max(
+    ...strings.map((string) => string.length)
+  );
 
-  return strings.map((string) => string.padEnd(longestStringLenght));
+  return strings.map((string) => string.padEnd(longestStringLength));
 };
 
 console.log(normalizeStringLengths(["cat", "elephant", "dog"]));
