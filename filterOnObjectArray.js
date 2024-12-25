@@ -81,32 +81,27 @@ const filterRecentOrders = function (orders) {
   return orders.filter(orderedWithin30Days);
 };
 
-console.log(
-  filterRecentOrders([
-    { orderDate: "2024-11-01" },
-    { orderDate: "2024-12-01" },
-    { orderDate: "2024-11-24" },
-  ])
-);
+// console.log(
+//   filterRecentOrders([
+//     { orderDate: "2024-11-01" },
+//     { orderDate: "2024-12-01" },
+//     { orderDate: "2024-11-24" },
+//   ])
+// );
 
 // products with a price lower than the average [{name: "item1", price: 10}, {name: "item2", price: 20}, {name: "item3", price: 5}] => [{name: "item1", price: 10}, {name: "item3", price: 5}]
-const computeAvgPrice = function (products) {
-  let totalPrice = 0;
-  const noOfProducts = products.length;
-
-  for (const product of products) {
-    totalPrice += product.price;
-  }
-
-  return totalPrice / noOfProducts;
-};
-
 const filterBelowAveragePrice = function (products) {
-  const averagePrice = computeAvgPrice(products);
+  const averagePrice =
+    products.reduce((total, product) => total + product.price, 0) /
+    products.length;
 
-  return products.filter(function (product) {
-    return product.price < averagePrice;
-  });
+  return products.filter((product) => product.price < averagePrice);
 };
 
-// console.log(filterBelowAveragePrice([{ name: "item1", price: 10 }, { name: "item2", price: 20 }, { name: "item3", price: 5 }]));
+console.log(
+  filterBelowAveragePrice([
+    { name: "item1", price: 10 },
+    { name: "item2", price: 20 },
+    { name: "item3", price: 5 },
+  ])
+);
