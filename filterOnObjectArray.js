@@ -147,3 +147,42 @@ const filterHighValueOrders = function (orders) {
 //     { orderId: 3, amount: 10 },
 //   ])
 // );
+
+// books with reviews higher than the average rating [{title: "Book 1", rating: 4}, {title: "Book 2", rating: 5}, {title: "Book 3", rating: 3}] => [{title: "Book 2", rating: 5}]
+const averageOfObjectProperty = (objects) => {
+  return (property) => {
+    return (
+      objects.reduce((total, element) => total + element[property], 0) /
+      objects.length
+    );
+  };
+};
+
+const filterTopRatedBooks = function (books) {
+  const averageRating = averageOfObjectProperty(books)("rating");
+
+  return books.filter((book) => book.rating > averageRating);
+};
+
+// console.log(
+//   filterTopRatedBooks([
+//     { title: "Book 1", rating: 4 },
+//     { title: "Book 2", rating: 5 },
+//     { title: "Book 3", rating: 3 },
+//   ])
+// );
+
+// employees whose salary is higher than the department average [{name: "Alice", salary: 5000, department: "HR"}, {name: "Bob", salary: 7000, department: "HR"}, {name: "Charlie", salary: 4000, department: "IT"}] => [{name: "Bob", salary: 7000, department: "HR"}]
+const filterHighSalaryEmployees = function (employees) {
+  const averageSalary = averageOfObjectProperty(employees)("salary");
+
+  return employees.filter((employee) => employee.salary > averageSalary);
+};
+
+// console.log(
+//   filterHighSalaryEmployees([
+//     { name: "Alice", salary: 5000, department: "HR" },
+//     { name: "Bob", salary: 7000, department: "HR" },
+//     { name: "Charlie", salary: 4000, department: "IT" },
+//   ])
+// );
