@@ -288,3 +288,48 @@ const filterByMathGrade = function (students, grade) {
 //     75
 //   )
 // );
+
+// filter employees who earn more than a certain salary [{name: "Alice", salary: 5000}, {name: "Bob", salary: 7000}] => [{name: "Bob", salary: 7000}]
+const filterBySalary = function (employees, salary) {
+  return employees.filter((employee) => employee.salary > salary);
+};
+
+// console.log(
+//   filterBySalary(
+//     [
+//       { name: "Alice", salary: 5000 },
+//       { name: "Bob", salary: 7000 },
+//     ],
+//     6000
+//   )
+// );
+
+// filter orders with a quantity greater than a given number [{orderId: 1, quantity: 10}, {orderId: 2, quantity: 5}] => [{orderId: 1, quantity: 10}]
+const filterByQuantity = function (orders, quantity) {
+  return orders.filter((order) => order.quantity > quantity);
+};
+
+// console.log(
+//   filterByQuantity(
+//     [
+//       { orderId: 1, quantity: 10 },
+//       { orderId: 2, quantity: 5 },
+//     ],
+//     6
+//   )
+// );
+
+// filter books published after a certain year [{title: "Book1", year: 2020}, {title: "Book2", year: 2022}] => [{title: "Book2", year: 2022}]
+const filterByYear = function (books, year) {
+  return books.filter((book) => book.year > year);
+};
+
+// console.log(
+//   filterByYear(
+//     [
+//       { title: "Book1", year: 2020 },
+//       { title: "Book2", year: 2022 },
+//     ],
+//     2021
+//   )
+// );
