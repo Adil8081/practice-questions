@@ -131,3 +131,19 @@ const filterStudentsWithAllSubjectsPassed = function (students) {
 //     },
 //   ])
 // );
+
+// orders that exceed the average order value [{orderId: 1, amount: 20}, {orderId: 2, amount: 50}, {orderId: 3, amount: 10}] => [{orderId: 2, amount: 50}]
+const filterHighValueOrders = function (orders) {
+  const averageOrderAmount =
+    orders.reduce((total, order) => total + order.amount, 0) / orders.length;
+
+  return orders.filter((order) => order.amount > averageOrderAmount);
+};
+
+// console.log(
+//   filterHighValueOrders([
+//     { orderId: 1, amount: 20 },
+//     { orderId: 2, amount: 50 },
+//     { orderId: 3, amount: 10 },
+//   ])
+// );
