@@ -190,4 +190,28 @@ const normalizeStringLengths = function (strings) {
   return strings.map((string) => string.padEnd(longestStringLength));
 };
 
-console.log(normalizeStringLengths(["cat", "elephant", "dog"]));
+// console.log(normalizeStringLengths(["cat", "elephant", "dog"]));
+
+// map each string to its frequency in ["apple", "banana", "apple", "apple", "banana"] => [3, 2, 3, 3, 2]
+// function countElements(array) {
+//   return function (element) {
+//     return array.filter((fruit) => fruit === element).length;
+//   };
+// }
+
+// function countElements(element, array) {
+//   return array.filter((fruit) => fruit === element).length;
+// }
+
+// const stringFrequencies = function (strings) {
+//   // return strings.map((fruit) => countElements(strings)(fruit));
+//   return strings.map((fruit) => countElements(fruit, strings));
+// };
+
+const stringFrequencies = function (strings) {
+  return strings.map(
+    (fruit) => strings.filter((element) => element === fruit).length
+  );
+};
+
+console.log(stringFrequencies(["apple", "banana", "apple", "apple", "banana"]));

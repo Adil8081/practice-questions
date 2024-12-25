@@ -2,9 +2,6 @@
 // Maintain the order of their first appearance in each string
 const uniqueCharactersOf = function (strings) {};
 
-// map each string to its frequency in ["apple", "banana", "apple", "apple", "banana"] => [3, 2, 3, 3, 2]
-const stringFrequencies = function (strings) {};
-
 // normalize scores based on a curve: first find the max score, then subtract the mean, and scale the results to a range of 0-100 in [{ name: "Alice", score: 80 }, { name: "Bob", score: 100 }, { name: "Charlie", score: 90 }] => [60, 100, 80]
 // Steps: Find max score, calculate mean, normalize each score.
 const normalizeWithCurve = function (objects) {};
