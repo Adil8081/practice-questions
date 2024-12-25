@@ -186,3 +186,27 @@ const filterHighSalaryEmployees = function (employees) {
 //     { name: "Charlie", salary: 4000, department: "IT" },
 //   ])
 // );
+
+// cities with a population higher than the median [{name: "City A", population: 2000}, {name: "City B", population: 5000}, {name: "City C", population: 3000}] => [{name: "City B", population: 5000}]
+const filterCitiesAboveMedianPopulation = function (cities) {
+  const sortPopulation = cities
+    .map((city) => city.population)
+    .sort((population1, population2) => population1 - population2);
+
+  const middleIndex = Math.floor(sortPopulation.length / 2);
+
+  const medianPopulation =
+    sortPopulation % 2 === 0
+      ? (sortPopulation[middleIndex - 1] + sortPopulation[middleIndex]) / 2
+      : sortPopulation[middleIndex];
+
+  return cities.filter((city) => city.population > medianPopulation);
+};
+
+console.log(
+  filterCitiesAboveMedianPopulation([
+    { name: "City A", population: 2000 },
+    { name: "City B", population: 5000 },
+    { name: "City C", population: 3000 },
+  ])
+);
