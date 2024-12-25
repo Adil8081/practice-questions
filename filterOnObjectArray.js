@@ -247,13 +247,29 @@ const filterByAge = function (people, age) {
   return people.filter((person) => person.age > age);
 };
 
-console.log(
-  filterByAge(
-    [
-      { name: "Alice", age: 25 },
-      { name: "Bob", age: 30 },
-      { name: "Charlie", age: 22 },
-    ],
-    24
-  )
-);
+// console.log(
+//   filterByAge(
+//     [
+//       { name: "Alice", age: 25 },
+//       { name: "Bob", age: 30 },
+//       { name: "Charlie", age: 22 },
+//     ],
+//     24
+//   )
+// );
+
+// filter products that are cheaper than a given price [{name: "item1", price: 20}, {name: "item2", price: 50}, {name: "item3", price: 10}] => [{name: "item1", price: 20}, {name: "item3", price: 10}]
+const filterByPrice = function (products, price) {
+  return products.filter((product) => product.price > price);
+};
+
+// console.log(
+//   filterByPrice(
+//     [
+//       { name: "item1", price: 20 },
+//       { name: "item2", price: 50 },
+//       { name: "item3", price: 10 },
+//     ],
+//     20
+//   )
+// );
