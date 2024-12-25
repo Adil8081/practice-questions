@@ -112,4 +112,13 @@ const differencesFromMean = function (numbers) {
   return numbers.map((number) => number - average);
 };
 
-console.log(differencesFromMean([10, 20, 30]));
+// console.log(differencesFromMean([10, 20, 30]));
+
+// mark the largest number in an array as true, others as false in [1, 3, 2] => [false, true, false]
+const markLargestNumber = function (numbers) {
+  const maxNumber = Math.max(...numbers);
+
+  return numbers.map((number) => number === maxNumber);
+};
+
+console.log(markLargestNumber([1, 3, 2]));
