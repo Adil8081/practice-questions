@@ -203,10 +203,26 @@ const filterCitiesAboveMedianPopulation = function (cities) {
   return cities.filter((city) => city.population > medianPopulation);
 };
 
+// console.log(
+//   filterCitiesAboveMedianPopulation([
+//     { name: "City A", population: 2000 },
+//     { name: "City B", population: 5000 },
+//     { name: "City C", population: 3000 },
+//   ])
+// );
+
+// posts with more than the average number of likes [{postId: 1, likes: 100}, {postId: 2, likes: 200}, {postId: 3, likes: 150}] => [{postId: 2, likes: 200}]
+const filterPopularPosts = function (posts) {
+  const averageLikes = averageOfObjectProperty(posts)("likes");
+  // console.log(averageLikes);
+
+  return posts.filter((post) => post.likes > averageLikes);
+};
+
 console.log(
-  filterCitiesAboveMedianPopulation([
-    { name: "City A", population: 2000 },
-    { name: "City B", population: 5000 },
-    { name: "City C", population: 3000 },
+  filterPopularPosts([
+    { postId: 1, likes: 100 },
+    { postId: 2, likes: 200 },
+    { postId: 3, likes: 150 },
   ])
 );
