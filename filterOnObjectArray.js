@@ -234,10 +234,26 @@ const filterActiveUsersByPostCount = function (users) {
   return users.filter((user) => user.postCount > averagePosts);
 };
 
+// console.log(
+//   filterActiveUsersByPostCount([
+//     { username: "Alice", postCount: 5 },
+//     { username: "Bob", postCount: 8 },
+//     { username: "Charlie", postCount: 3 },
+//   ])
+// );
+
+// filter people older than a certain age [{name: "Alice", age: 25}, {name: "Bob", age: 30}, {name: "Charlie", age: 22}] => [{name: "Bob", age: 30}]
+const filterByAge = function (people, age) {
+  return people.filter((person) => person.age > age);
+};
+
 console.log(
-  filterActiveUsersByPostCount([
-    { username: "Alice", postCount: 5 },
-    { username: "Bob", postCount: 8 },
-    { username: "Charlie", postCount: 3 },
-  ])
+  filterByAge(
+    [
+      { name: "Alice", age: 25 },
+      { name: "Bob", age: 30 },
+      { name: "Charlie", age: 22 },
+    ],
+    24
+  )
 );
