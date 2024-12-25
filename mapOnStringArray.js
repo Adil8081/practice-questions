@@ -214,4 +214,4 @@ const stringFrequencies = function (strings) {
   );
 };
 
-console.log(stringFrequencies(["apple", "banana", "apple", "apple", "banana"]));
+// console.log(stringFrequencies(["apple", "banana", "apple", "apple", "banana"]));
