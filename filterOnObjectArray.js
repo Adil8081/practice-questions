@@ -219,10 +219,25 @@ const filterPopularPosts = function (posts) {
   return posts.filter((post) => post.likes > averageLikes);
 };
 
+// console.log(
+//   filterPopularPosts([
+//     { postId: 1, likes: 100 },
+//     { postId: 2, likes: 200 },
+//     { postId: 3, likes: 150 },
+//   ])
+// );
+
+// users who have posted more than the average number of posts [{username: "Alice", postCount: 5}, {username: "Bob", postCount: 8}, {username: "Charlie", postCount: 3}] => [{username: "Bob", postCount: 8}]
+const filterActiveUsersByPostCount = function (users) {
+  const averagePosts = averageOfObjectProperty(users)("postCount");
+
+  return users.filter((user) => user.postCount > averagePosts);
+};
+
 console.log(
-  filterPopularPosts([
-    { postId: 1, likes: 100 },
-    { postId: 2, likes: 200 },
-    { postId: 3, likes: 150 },
+  filterActiveUsersByPostCount([
+    { username: "Alice", postCount: 5 },
+    { username: "Bob", postCount: 8 },
+    { username: "Charlie", postCount: 3 },
   ])
 );
