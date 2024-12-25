@@ -2,9 +2,6 @@
 // Maintain the order of their first appearance in each string
 const uniqueCharactersOf = function (strings) {};
 
-// map each number to the difference between it and the average of the array in [10, 20, 30] => [-10, 0, 10]
-const differencesFromMean = function (numbers) {};
-
 // map each string to its frequency in ["apple", "banana", "apple", "apple", "banana"] => [3, 2, 3, 3, 2]
 const stringFrequencies = function (strings) {};
 

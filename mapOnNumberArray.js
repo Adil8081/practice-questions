@@ -102,4 +102,14 @@ const scaleToMax100 = function (numbers) {
   return numbers.map((number) => (number * 100) / maxNumber);
 };
 
-console.log(scaleToMax100([20, 50, 80]));
+// console.log(scaleToMax100([20, 50, 80]));
+
+// map each number to the difference between it and the average of the array in [10, 20, 30] => [-10, 0, 10]
+const differencesFromMean = function (numbers) {
+  const average =
+    numbers.reduce((total, number) => total + number, 0) / numbers.length;
+
+  return numbers.map((number) => number - average);
+};
+
+console.log(differencesFromMean([10, 20, 30]));
