@@ -148,10 +148,34 @@ const normalizeScores = function (objects) {
   return objects.map((person) => person.score / 100);
 };
 
+// console.log(
+//   normalizeScores([
+//     { name: "Alice", score: 80 },
+//     { name: "Bob", score: 100 },
+//     { name: "pob", score: 70 },
+//   ])
+// );
+
+// calculate ranks (1-based, descending) for scores in [{ name: "Alice", score: 80 }, { name: "Bob", score: 100 }, { name: "Charlie", score: 90 }] => [2, 1, 3]
+const calculateRanks = function (objects) {
+  const sortStudentOnScore = [...objects].sort(
+    (student1, student2) => student2.score - student1.score
+  );
+  const rankStudents = sortStudentOnScore.map((student, index) => ({
+    ...student,
+    rank: index + 1,
+  }));
+
+  return objects.map(
+    (student) =>
+      rankStudents.find((candidate) => candidate.name === student.name).rank
+  );
+};
+
 console.log(
-  normalizeScores([
+  calculateRanks([
     { name: "Alice", score: 80 },
     { name: "Bob", score: 100 },
-    { name: "pob", score: 70 },
+    { name: "Charlie", score: 90 },
   ])
 );
