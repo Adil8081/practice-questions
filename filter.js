@@ -7,18 +7,6 @@ const filterBirthdaysThisMonth = function (people) {};
 // filter events that occur before a certain date [{name: "Event1", date: "2024-12-01"}, {name: "Event2", date: "2024-11-15"}] => [{name: "Event2", date: "2024-11-15"}]
 const filterByDate = function (events, date) {};
 
-// filter students with a grade higher than a given threshold in a specific subject [{name: "Alice", grades: {math: 90, science: 80}}, {name: "Bob", grades: {math: 70, science: 85}}] => [{name: "Alice", grades: {math: 90, science: 80}}]
-const filterBySubjectGrade = function (students, subject, threshold) {};
-
-// filter photos with a minimum number of likes [{id: 1, likes: 100}, {id: 2, likes: 50}] => [{id: 1, likes: 100}]
-const filterByLikes = function (photos, likes) {};
-
-// filter users who have made a certain number of posts [{username: "Alice", posts: 10}, {username: "Bob", posts: 5}] => [{username: "Alice", posts: 10}]
-const filterByPostCount = function (users, postCount) {};
-
-// Apply a discount to each item's price, then filter for items under a certain price [{name: "item1", price: 100}, {name: "item2", price: 50}] => [{name: "item2", price: 45}]
-const filterDiscountedItems = function (items, discount, maxPrice) {};
-
 // Convert product names to uppercase, then filter for products with names longer than a certain number [{name: "apple"}, {name: "banana"}] => [{name: "APPLE"}]
 const filterLongProductNames = function (products, minLength) {};
 
