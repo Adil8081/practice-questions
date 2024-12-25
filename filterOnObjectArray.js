@@ -98,10 +98,36 @@ const filterBelowAveragePrice = function (products) {
   return products.filter((product) => product.price < averagePrice);
 };
 
-console.log(
-  filterBelowAveragePrice([
-    { name: "item1", price: 10 },
-    { name: "item2", price: 20 },
-    { name: "item3", price: 5 },
-  ])
-);
+// console.log(
+//   filterBelowAveragePrice([
+//     { name: "item1", price: 10 },
+//     { name: "item2", price: 20 },
+//     { name: "item3", price: 5 },
+//   ])
+// );
+
+// students who passed all subjects [{name: "John", subjects: [{name: "Math", passed: true}, {name: "Science", passed: true}]}, {name: "Jane", subjects: [{name: "Math", passed: false}, {name: "Science", passed: true}]}] => [{name: "John", subjects: [{name: "Math", passed: true}, {name: "Science", passed: true}]}]
+const filterStudentsWithAllSubjectsPassed = function (students) {
+  return students.filter((student) =>
+    student.subjects.every((subject) => subject.passed)
+  );
+};
+
+// console.log(
+//   filterStudentsWithAllSubjectsPassed([
+//     {
+//       name: "John",
+//       subjects: [
+//         { name: "Math", passed: true },
+//         { name: "Science", passed: true },
+//       ],
+//     },
+//     {
+//       name: "Jane",
+//       subjects: [
+//         { name: "Math", passed: false },
+//         { name: "Science", passed: true },
+//       ],
+//     },
+//   ])
+// );
