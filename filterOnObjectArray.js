@@ -1,3 +1,36 @@
+// active users [{username: "alice", active: true}, {username: "bob", active: false}] => [{username: "alice", active: true}]
+const isUserActive = function (userDetail) {
+  return userDetail.active;
+};
+
+const filterActiveUsers = function (users) {
+  return users.filter(isUserActive);
+};
+
+// console.log(filterActiveUsers([{username: "alice", active: true}, {username: "bob", active: false}]));
+
+// users with incomplete profiles [{username: "alice", profileComplete: true}, {username: "bob", profileComplete: false}] => [{username: "bob", profileComplete: false}]
+const isProfileIncomplete = function (userDetail) {
+  return !userDetail.profileComplete;
+};
+
+const filterIncompleteProfiles = function (users) {
+  return users.filter(isProfileIncomplete);
+};
+
+// console.log(filterIncompleteProfiles([{ username: "alice", profileComplete: true }, { username: "bob", profileComplete: false }]));
+
+// products that are in stock [{product: "apple", inStock: true}, {product: "banana", inStock: false}] => [{product: "apple", inStock: true}]
+const inStock = function (productDetail) {
+  return productDetail.inStock;
+};
+
+const filterInStockProducts = function (products) {
+  return products.filter(inStock);
+};
+
+// console.log(filterInStockProducts([{ product: "apple", inStock: true }, { product: "banana", inStock: false }]));
+
 // people older than 30 [{name: "Alice", age: 25}, {name: "Bob", age: 35}] => [{name: "Bob", age: 35}]
 const ageAbove30 = function (person) {
   return person.age > 30;
