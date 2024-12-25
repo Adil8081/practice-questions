@@ -273,3 +273,18 @@ const filterByPrice = function (products, price) {
 //     20
 //   )
 // );
+
+// filter students who scored above a certain grade in Math [{name: "John", grades: {math: 80, science: 90}}, {name: "Jane", grades: {math: 70, science: 85}}] => [{name: "John", grades: {math: 80, science: 90}}]
+const filterByMathGrade = function (students, grade) {
+  return students.filter((student) => student.grades.math > grade);
+};
+
+// console.log(
+//   filterByMathGrade(
+//     [
+//       { name: "John", grades: { math: 80, science: 90 } },
+//       { name: "Jane", grades: { math: 70, science: 85 } },
+//     ],
+//     75
+//   )
+// );
