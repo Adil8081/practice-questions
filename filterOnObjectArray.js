@@ -159,9 +159,9 @@ const averageOfObjectProperty = (objects) => {
 };
 
 const filterTopRatedBooks = function (books) {
-  const averageRating = averageOfObjectProperty(books)("rating");
+  const averageBookRating = averageOfObjectProperty(books)("rating");
 
-  return books.filter((book) => book.rating > averageRating);
+  return books.filter((book) => book.rating > averageBookRating);
 };
 
 // console.log(
