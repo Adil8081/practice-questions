@@ -1,6 +1,3 @@
-// reverseWords(["hello", "world"]) => "world hello"
-const reverseWords = function (words) {};
-
 // joinWordsWithSpace(["apple", "banana", "cherry"]) => "apple banana cherry"
 const joinWordsWithSpace = function (words) {};
 
