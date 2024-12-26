@@ -19,3 +19,13 @@ const longestWord = function (words) {
 };
 
 // console.log(longestWord(["apple", "banana", "cherry", "kiwi"]));
+
+// shortestWord(["apple", "banana", "cherry", "kiwi"]) => "kiwi"
+const shortestWord = function (words) {
+  return words.reduce(
+    (shortestWord, word) => (shortestWord.length < word ? shortestWord : word),
+    ""
+  );
+};
+
+// console.log(shortestWord(["apple", "banana", "cherry", "kiwi"]));
