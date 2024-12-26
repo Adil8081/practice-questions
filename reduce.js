@@ -1,6 +1,3 @@
-// joinWithComma(["apple", "banana", "cherry"]) => "apple,banana,cherry"
-const joinWithComma = function (words) {};
-
 // reverseWords(["hello", "world"]) => "world hello"
 const reverseWords = function (words) {};
 
