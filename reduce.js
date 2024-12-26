@@ -1,6 +1,3 @@
-// joinWordsWithSpace(["apple", "banana", "cherry"]) => "apple banana cherry"
-const joinWordsWithSpace = function (words) {};
-
 // concatenateNames(["John", "Jane", "Doe"]) => "JohnJaneDoe"
 const concatenateNames = function (names) {};
 

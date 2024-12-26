@@ -56,3 +56,16 @@ const reverseWords = function (words) {
 };
 
 // console.log(reverseWords(["hello", "world"]));
+
+// joinWordsWithSpace(["apple", "banana", "cherry"]) => "apple banana cherry"
+const joinWordsWithSpace = function (words) {
+  return words
+    .reduce((combineWord, word) => {
+      combineWord.push(word);
+
+      return combineWord;
+    }, [])
+    .join(" ");
+};
+
+// console.log(joinWordsWithSpace(["apple", "banana", "cherry"]));
