@@ -59,13 +59,18 @@ const reverseWords = function (words) {
 
 // joinWordsWithSpace(["apple", "banana", "cherry"]) => "apple banana cherry"
 const joinWordsWithSpace = function (words) {
-  return words
-    .reduce((combineWord, word) => {
-      combineWord.push(word);
+  return words.reduce((combineWord, word) => {
+    combineWord.push(word);
 
-      return combineWord;
-    }, [])
-    .join(" ");
+    return combineWord;
+  }, []);
 };
 
 // console.log(joinWordsWithSpace(["apple", "banana", "cherry"]));
+
+// concatenateNames(["John", "Jane", "Doe"]) => "JohnJaneDoe"
+const concatenateNames = function (names) {
+  return names.reduce((comnineName, Name) => comnineName.concat(Name), "");
+};
+
+// console.log(concatenateNames(["John", "Jane", "Doe"]));

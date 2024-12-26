@@ -1,6 +1,3 @@
-// concatenateNames(["John", "Jane", "Doe"]) => "JohnJaneDoe"
-const concatenateNames = function (names) {};
-
 // countVowelsInWords(["hello", "world"]) => "eoo"
 const countVowelsInWords = function (words) {};
 
