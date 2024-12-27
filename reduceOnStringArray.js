@@ -1,21 +1,16 @@
 // concatenateWords(["hello", "world"]) => "helloworld"
-const concatWord = function (string, word) {
-  return string.concat(word);
-};
-
 const concatenateWords = function (words) {
-  return words.reduce(concatWord, "");
+  return words.reduce((combineWord, word) => combineWord.concat(word), "");
 };
 
 // console.log(concatenateWords(["hello", "world"]));
 
 // longestWord(["apple", "banana", "cherry", "kiwi"]) => "banana"
-const longerWord = function (longWord, word) {
-  return word.length > longWord.length ? word : longWord;
-};
-
 const longestWord = function (words) {
-  return words.reduce(longerWord, "");
+  return words.reduce(
+    (longWord, word) => (word.length > longWord.length ? word : longWord),
+    ""
+  );
 };
 
 // console.log(longestWord(["apple", "banana", "cherry", "kiwi"]));
@@ -23,7 +18,7 @@ const longestWord = function (words) {
 // shortestWord(["apple", "banana", "cherry", "kiwi"]) => "kiwi"
 const shortestWord = function (words) {
   return words.reduce(
-    (shortestWord, word) => (shortestWord.length < word ? shortestWord : word),
+    (shortWord, word) => (shortWord.length < word ? shortWord : word),
     ""
   );
 };
@@ -31,28 +26,25 @@ const shortestWord = function (words) {
 // console.log(shortestWord(["apple", "banana", "cherry", "kiwi"]));
 
 // joinWithComma(["apple", "banana", "cherry"]) => "apple,banana,cherry"
-// const joinWithComma = function (words) {
-//   return [words.join(",")];
-// };
-
 const joinWithComma = function (words) {
-  return words.reduce((combineWord, word) => {
-    combineWord.push(word);
-    return [combineWord.join(",")];
-  }, []);
+  return words.join(",");
 };
 
 // console.log(joinWithComma(["apple", "banana", "cherry"]));
 
 // reverseWords(["hello", "world"]) => "world hello"
-const reverseWords = function (words) {
-  return words
-    .reduce((combineWord, word) => {
-      combineWord.unshift(word);
+// const reverseWords = function (words) {
+//   return words
+//     .reduce((combineWord, word) => {
+//       combineWord.unshift(word);
 
-      return combineWord;
-    }, [])
-    .join(" ");
+//       return combineWord;
+//     }, [])
+//     .join(" ");
+// };
+
+const reverseWords = function (words) {
+  return words.reduce((combineWord, word) => word.concat(" ", combineWord));
 };
 
 // console.log(reverseWords(["hello", "world"]));
