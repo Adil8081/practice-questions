@@ -108,3 +108,19 @@ const duplicateNumbers = function (numbers) {
 };
 
 // console.log(duplicateNumbers([1, 2, 3]));
+
+// concatenateArrays([[1, 2], [3, 4], [5, 6]]) => [1, 2, 3, 4, 5, 6]
+const concatenateArrays = function (arrays) {
+  return arrays.reduce(
+    (unzipNestedArray, array) => [...unzipNestedArray, ...array],
+    []
+  );
+};
+
+// console.log(
+//   concatenateArrays([
+//     [1, 2],
+//     [3, 4],
+//     [5, 6],
+//   ])
+// );
