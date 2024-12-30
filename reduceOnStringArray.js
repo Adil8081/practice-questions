@@ -33,16 +33,6 @@ const joinWithComma = function (words) {
 // console.log(joinWithComma(["apple", "banana", "cherry"]));
 
 // reverseWords(["hello", "world"]) => "world hello"
-// const reverseWords = function (words) {
-//   return words
-//     .reduce((combineWord, word) => {
-//       combineWord.unshift(word);
-
-//       return combineWord;
-//     }, [])
-//     .join(" ");
-// };
-
 const reverseWords = function (words) {
   return words.reduce((combineWord, word) => word.concat(" ", combineWord));
 };
@@ -51,11 +41,7 @@ const reverseWords = function (words) {
 
 // joinWordsWithSpace(["apple", "banana", "cherry"]) => "apple banana cherry"
 const joinWordsWithSpace = function (words) {
-  return words.reduce((combineWord, word) => {
-    combineWord.push(word);
-
-    return combineWord;
-  }, []);
+  return words.join(" ");
 };
 
 // console.log(joinWordsWithSpace(["apple", "banana", "cherry"]));
