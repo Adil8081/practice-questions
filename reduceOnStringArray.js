@@ -65,4 +65,14 @@ const countVowelsInWords = function (words) {
   );
 };
 
-console.log(countVowelsInWords(["hello", "world"]));
+// console.log(countVowelsInWords(["hello", "world"]));
+
+// makeCamelCase(["hello", "world", "how", "are", "you"]) => "helloWorldHowAreYou"
+const makeCamelCase = function (words) {
+  return words.reduce(
+    (camelCaseWords, word) =>
+      camelCaseWords + word[0].toUpperCase() + word.slice(1)
+  );
+};
+
+// console.log(makeCamelCase(["hello", "world", "how", "are", "you"]));

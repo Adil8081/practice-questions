@@ -1,6 +1,3 @@
-// makeCamelCase(["hello", "world", "how", "are", "you"]) => "helloWorldHowAreYou"
-const makeCamelCase = function (words) {};
-
 // reverseString(["apple", "banana", "cherry"]) => "elppaananabyrrehc"
 const reverseString = function (words) {};
 
