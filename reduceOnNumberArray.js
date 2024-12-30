@@ -163,4 +163,14 @@ const mergeObjects = function (objects) {
   }, {});
 };
 
-console.log(mergeObjects([{ a: 1, b: 2 }, { b: 3, c: 4 }, { a: 5 }]));
+// console.log(mergeObjects([{ a: 1, b: 2 }, { b: 3, c: 4 }, { a: 5 }]));
+
+// zip(["a", "b", "c"], [1, 2, 3]) => { "a": 1, "b": 2, "c": 3 }
+const zip = function (keys, values) {
+  return keys.reduce((zippedArray, key, index) => {
+    zippedArray[key] = values[index];
+    return zippedArray;
+  }, {});
+};
+
+console.log(zip(["a", "b", "c"], [1, 2, 3]));
