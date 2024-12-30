@@ -52,3 +52,17 @@ const concatenateNames = function (names) {
 };
 
 // console.log(concatenateNames(["John", "Jane", "Doe"]));
+
+// countVowelsInWords(["hello", "world"]) => "eoo"
+const countVowelsInWords = function (words) {
+  const vowels = "aeiou";
+
+  return words.reduce(
+    (presentVowels, word) =>
+      presentVowels +
+      [...word].filter((char) => vowels.includes(char)).join(""),
+    ""
+  );
+};
+
+console.log(countVowelsInWords(["hello", "world"]));

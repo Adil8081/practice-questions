@@ -1,6 +1,3 @@
-// countVowelsInWords(["hello", "world"]) => "eoo"
-const countVowelsInWords = function (words) {};
-
 // makeCamelCase(["hello", "world", "how", "are", "you"]) => "helloWorldHowAreYou"
 const makeCamelCase = function (words) {};
 
