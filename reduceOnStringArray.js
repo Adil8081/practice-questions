@@ -109,3 +109,13 @@ const groupByLength = function (strings) {
 };
 
 // console.log(groupByLength(["apple", "banana", "cherry", "date"]));
+
+// makeObject(["city", "country"], ["Paris", "France"]) => { "city": "Paris", "country": "France" }
+const makeObject = function (keys, values) {
+  return keys.reduce((cityCountry, key, index) => {
+    cityCountry[key] = values[index];
+    return cityCountry;
+  }, {});
+};
+
+// console.log(makeObject(["city", "country"], ["Paris", "France"]));
