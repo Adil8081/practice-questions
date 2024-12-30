@@ -1,6 +1,3 @@
-// flattenArray([[1, 2], [3, 4], [5, 6]]) => [1, 2, 3, 4, 5, 6]
-const flattenArray = function (arrays) {};
-
 // uniqueNumbers([1, 2, 2, 3, 4, 4, 5]) => [1, 2, 3, 4, 5]
 const uniqueNumbers = function (numbers) {};
 

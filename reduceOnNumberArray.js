@@ -117,8 +117,26 @@ const concatenateArrays = function (arrays) {
   );
 };
 
+// console.log(
+//   concatenateArrays([
+//     [1, 2],
+//     [3, 4],
+//     [5, 6],
+//   ])
+// );
+
+// flattenArray([[1, 2], [3, 4], [5, 6]]) => [1, 2, 3, 4, 5, 6]
+
+const flattenArray = function (arrays) {
+  return arrays.reduce((unzippedArray, element) => {
+    return Array.isArray(element)
+      ? unzippedArray.concat(flattenArray(element))
+      : unzippedArray.concat(element);
+  }, []);
+};
+
 console.log(
-  concatenateArrays([
+  flattenArray([
     [1, 2],
     [3, 4],
     [5, 6],
