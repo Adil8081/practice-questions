@@ -76,3 +76,13 @@ const makeCamelCase = function (words) {
 };
 
 // console.log(makeCamelCase(["hello", "world", "how", "are", "you"]));
+
+// reverseString(["apple", "banana", "cherry"]) => "elppaananabyrrehc"
+const reverseString = function (words) {
+  return words.reduce(
+    (reverseWord, word) => reverseWord + word.split("").reverse().join(""),
+    ""
+  );
+};
+
+// console.log(reverseString(["apple", "banana", "cherry"]));
