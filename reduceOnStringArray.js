@@ -95,4 +95,17 @@ const countOccurrences = function (strings) {
   }, {});
 };
 
-console.log(countOccurrences(["apple", "banana", "cherry", "banana"]));
+// console.log(countOccurrences(["apple", "banana", "cherry", "banana"]));
+
+// groupByLength(["apple", "banana", "cherry", "date"]) => { 5: ["apple"], 6: ["banana", "cherry"], 4: ["date"] }
+const groupByLength = function (strings) {
+  return strings.reduce((fruitObject, string) => {
+    const key = string.length;
+    fruitObject[key] = fruitObject[key]
+      ? fruitObject[key].concat(string)
+      : [string];
+    return fruitObject;
+  }, {});
+};
+
+// console.log(groupByLength(["apple", "banana", "cherry", "date"]));
