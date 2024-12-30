@@ -1,6 +1,3 @@
-// concatenateArrays([[1, 2], [3, 4], [5, 6]]) => [1, 2, 3, 4, 5, 6]
-const concatenateArrays = function (arrays) {};
-
 // flattenArray([[1, 2], [3, 4], [5, 6]]) => [1, 2, 3, 4, 5, 6]
 const flattenArray = function (arrays) {};
 
