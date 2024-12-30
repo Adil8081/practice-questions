@@ -86,3 +86,13 @@ const reverseString = function (words) {
 };
 
 // console.log(reverseString(["apple", "banana", "cherry"]));
+
+// countOccurrences(["apple", "banana", "cherry", "banana"]) => { apple: 1, banana: 2, cherry: 1 }
+const countOccurrences = function (strings) {
+  return strings.reduce((fruitCounter, string) => {
+    fruitCounter[string] = fruitCounter[string] ? fruitCounter[string] + 1 : 1;
+    return fruitCounter;
+  }, {});
+};
+
+console.log(countOccurrences(["apple", "banana", "cherry", "banana"]));
