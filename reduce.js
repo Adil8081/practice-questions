@@ -1,6 +1,3 @@
-// duplicateNumbers([1, 2, 3]) => [1, 1, 2, 2, 3, 3]
-const duplicateNumbers = function (numbers) {};
-
 // concatenateArrays([[1, 2], [3, 4], [5, 6]]) => [1, 2, 3, 4, 5, 6]
 const concatenateArrays = function (arrays) {};
 

@@ -98,3 +98,13 @@ const findSumOfEvenSquares = function (numbers) {
 };
 
 // console.log(findSumOfEvenSquares([1, 2, 3, 4]));
+
+// duplicateNumbers([1, 2, 3]) => [1, 1, 2, 2, 3, 3]
+const duplicateNumbers = function (numbers) {
+  return numbers.reduce(
+    (repetitiveNumbers, number) => [...repetitiveNumbers, number, number],
+    []
+  );
+};
+
+// console.log(duplicateNumbers([1, 2, 3]));
