@@ -151,4 +151,16 @@ const uniqueNumbers = function (numbers) {
   );
 };
 
-console.log(uniqueNumbers([1, 2, 2, 3, 4, 4, 5]));
+// console.log(uniqueNumbers([1, 2, 2, 3, 4, 4, 5]));
+
+// mergeObjects([{ a: 1, b: 2 }, { b: 3, c: 4 }, { a: 5 }]) => { a: 6, b: 5, c: 4 }
+const mergeObjects = function (objects) {
+  return objects.reduce((mergedObject, object) => {
+    Object.keys(object).map((key) => {
+      mergedObject[key] = (mergedObject[key] || 0) + object[key];
+    });
+    return mergedObject;
+  }, {});
+};
+
+console.log(mergeObjects([{ a: 1, b: 2 }, { b: 3, c: 4 }, { a: 5 }]));
