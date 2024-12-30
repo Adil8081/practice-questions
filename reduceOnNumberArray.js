@@ -135,10 +135,20 @@ const flattenArray = function (arrays) {
   }, []);
 };
 
-console.log(
-  flattenArray([
-    [1, 2],
-    [3, 4],
-    [5, 6],
-  ])
-);
+// console.log(
+//   flattenArray([
+//     [1, 2],
+//     [3, 4],
+//     [5, 6],
+//   ])
+// );
+
+// uniqueNumbers([1, 2, 2, 3, 4, 4, 5]) => [1, 2, 3, 4, 5]
+const uniqueNumbers = function (numbers) {
+  return numbers.reduce(
+    (set, number) => (set.includes(number) ? set : set.concat(number)),
+    []
+  );
+};
+
+console.log(uniqueNumbers([1, 2, 2, 3, 4, 4, 5]));
