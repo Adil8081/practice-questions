@@ -173,4 +173,14 @@ const zip = function (keys, values) {
   }, {});
 };
 
-console.log(zip(["a", "b", "c"], [1, 2, 3]));
+// console.log(zip(["a", "b", "c"], [1, 2, 3]));
+
+// invertObject({ "a": 1, "b": 2, "c": 3 }) => { 1: "a", 2: "b", 3: "c" }
+const invertObject = function (obj) {
+  return Object.keys(obj).reduce((invertKeyValue, key) => {
+    invertKeyValue[obj[key]] = key;
+    return invertKeyValue;
+  }, {});
+};
+
+// console.log(invertObject({ a: 1, b: 2, c: 3 }));
